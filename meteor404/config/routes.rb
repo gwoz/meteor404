@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
-  get 'user/new'
+  get 'users/new'
 
-  get 'user/create'
+  get 'users/create'
 
-  get 'user/index'
+  get 'users/index'
 
-  get 'user/show'
+  get 'users/show'
 
-  get 'user/edit'
+  get 'users/edit'
 
-  get 'user/update'
+  get 'users/update'
 
-  get 'user/delete'
+  get 'users/delete'
 
   get 'addresses/new'
 
@@ -21,13 +21,15 @@ Rails.application.routes.draw do
 
   get 'addresses/index'
 
-  get 'meteor/index'
+  get 'meteors/index'
+
+  get 'meteors/create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'meteor#index'
+  root 'meteors#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -37,6 +39,8 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
     resources :meteors
+    resources :users
+    resources :addresses
 
   # Example resource route with options:
   #   resources :products do

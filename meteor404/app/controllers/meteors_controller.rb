@@ -2,7 +2,6 @@ class MeteorsController < ApplicationController
   # before_action :find_meteor
 
   def index
-    @meteor = "Billy"
   end
 
   def create
@@ -13,10 +12,8 @@ class MeteorsController < ApplicationController
   def new
   end
 
-
   def show
   end
-
 
   private
   # Unsure if this will break or not for pages that don't have an id.
