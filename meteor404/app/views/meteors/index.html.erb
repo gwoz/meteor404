@@ -1,2 +1,16 @@
-<h1>Index</h1>
-<h2><%= @meteor %></h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meteor 404</title>
+  </head>
+  <body>
+    <h1>Meteor 404</h1>
+    <div id="map"></div>
+    <h2>Address</h2>
+    <%= render 'addresses/form' %>
+  </body>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiTtajqbHRILd6sHv9TUBgNhyDFKy5moE&callback=initMap"
+  async defer>
+  </script>
+
+</html>

@@ -1,4 +1,26 @@
 Rails.application.routes.draw do
+  get 'user/new'
+
+  get 'user/create'
+
+  get 'user/index'
+
+  get 'user/show'
+
+  get 'user/edit'
+
+  get 'user/update'
+
+  get 'user/delete'
+
+  get 'addresses/new'
+
+  get 'addresses/create'
+
+  get 'addresses/show'
+
+  get 'addresses/index'
+
   get 'meteor/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

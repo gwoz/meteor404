@@ -7,7 +7,6 @@ class MeteorsController < ApplicationController
 
   def create
     @meteor = Meteor.new(params[:meteor])
-
     @meteor.save
   end
 
