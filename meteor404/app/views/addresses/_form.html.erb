@@ -1,10 +1,27 @@
-<%= form_for :address do |f| %>
+<%= form_for :address, :url => :addresses do |f| %>
   <p>
-    <%= f.label :Address %><br>
-    <%= f.text_field :Address %>
+    <%= f.label :Street %><br>
+    <%= f.text_field :street %>
+  </p>
+
+  <p>
+    <%= f.label :City %><br>
+    <%= f.text_field :city %>
+  </p>
+
+  <p>
+    <%= f.label :State %><br>
+    <%= f.text_field :state %>
+  </p>
+
+  <p>
+    <%= f.label :Country %><br>
+    <%= f.text_field :country %>
   </p>
 
   <p>
     <%= f.submit %>
   </p>
 <% end %>
+
+
