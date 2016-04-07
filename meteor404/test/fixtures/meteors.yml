@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  id: 1
+  nametype: MyString
+  recclass: MyString
+  mass: 1
+  fall: MyString
+  year: 1
+  reclat: 1.5
+  reclong: 1.5
+  geolocation: MyString
+
+two:
+  name: MyString
+  id: 1
+  nametype: MyString
+  recclass: MyString
+  mass: 1
+  fall: MyString
+  year: 1
+  reclat: 1.5
+  reclong: 1.5
+  geolocation: MyString
