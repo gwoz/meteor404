@@ -32,8 +32,8 @@ function initMap() {
       url: 'https://data.nasa.gov/resource/gh4g-9sfh.json',
       data: {fall: "Fell"}
     }).done(function(response){
-      debugger
       populateMeteors(response);
+
       for (var i = 0; i < meteorArray.length; i ++){
         new Position(meteorArray[i].lat, meteorArray[i].lng)
       }
