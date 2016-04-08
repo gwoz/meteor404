@@ -16,22 +16,25 @@ function initMap() {
      new google.maps.Marker({
       position:{lat: usrLat, lng: usrLng},
       map: map,
-      title: 'meteor'
+      title: 'meteor',
+      // icon: "<img src='/images/rock.png'>"
     });
   }
 
   var populateMeteors = function(response){
     for(var i = 0; i < response.length; i ++){
-      meteorArray.push(new Meteor(parseInt(response[i].reclat), parseInt(response[i].reclong)))
+      meteorArray.push(new Meteor(parseFloat(response[i].reclat), parseFloat(response[i].reclong)))
     }
     return meteorArray;
   }
 
   $(document).ready(function(){
     $.ajax({
-      url: 'https://data.nasa.gov/resource/gh4g-9sfh.json'
+      url: 'https://data.nasa.gov/resource/gh4g-9sfh.json',
+      data: {fall: "Fell"}
     }).done(function(response){
       populateMeteors(response);
+
       for (var i = 0; i < meteorArray.length; i ++){
         new Position(meteorArray[i].lat, meteorArray[i].lng)
       }
