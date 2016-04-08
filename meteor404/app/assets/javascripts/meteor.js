@@ -16,7 +16,8 @@ function initMap() {
      new google.maps.Marker({
       position:{lat: usrLat, lng: usrLng},
       map: map,
-      title: 'meteor'
+      title: 'meteor',
+      // icon: "<img src='/images/rock.png'>"
     });
   }
 
