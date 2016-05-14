@@ -9,9 +9,6 @@ class MeteorsController < ApplicationController
     @meteor.save
   end
 
-  def new
-  end
-
   def show
   end
 
