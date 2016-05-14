@@ -23,6 +23,12 @@ html, body {
   height: 50%;
 }
 
+#google-search-bar{
+  display: inline-block;
+  position: absolute; 
+  left: 0; 
+  top: 8.54rem;"
+}
 /*Form */
 
 form {

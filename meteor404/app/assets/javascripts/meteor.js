@@ -1,11 +1,12 @@
 meteorArray = []
 
-var map;
+var map1;
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
+  map1 = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.7128, lng: -74.0059},
     zoom: 6
   });
+
 
   var Meteor = function(lat, lng){
     this.lat = lat;
@@ -15,7 +16,7 @@ function initMap() {
   var Position = function(usrLat, usrLng){
      new google.maps.Marker({
       position:{lat: usrLat, lng: usrLng},
-      map: map,
+      map: map1,
       title: 'meteor',
       // icon: "<img src='/images/rock.png'>"
     });
@@ -40,4 +41,16 @@ function initMap() {
       }
     })
   })
+
+  // search bar
+  var input = document.getElementById('google-search-bar');
+  var searchBox = new google.maps.places.SearchBox(input);
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+  
 }
+
+
+
+
+
