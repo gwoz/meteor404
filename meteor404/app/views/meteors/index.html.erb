@@ -5,12 +5,15 @@
   </head>
   <body>
     <h1>Meteor 404</h1>
-    <div id="map"></div>
+    <input id="google-search-bar" type="text" placeholder="enter an address" autocomplete="off" >
+    <div id="map"> </div>
     <h2>Address</h2>
     <%= render 'addresses/form' %>
-  </body>
   <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLEMAPSAPI"] %>&callback=initMap"
   async defer>
   </script>
+  </body>
 
 </html>
+
+
