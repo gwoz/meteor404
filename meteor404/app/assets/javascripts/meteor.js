@@ -49,7 +49,9 @@ function initMap() {
       // icon: "<img src='/images/rock.png'>"
     });
       marker.addListener('click', function() {
-      alert("jfwiojoi");
+      map1.setCenter(marker.getPosition());
+      map1.setZoom(8);
+      // alert(meteorArray[0].name);
       })
     });
   })
