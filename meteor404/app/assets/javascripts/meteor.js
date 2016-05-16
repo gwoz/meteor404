@@ -37,23 +37,42 @@ function initMap() {
     }).done(function(response){
       populateMeteors(response);
       // for loop creating all meteor objects
-      // for (var i = 0; i < meteorArray.length; i ++){
-      //   new Position(meteorArray[i].lat, meteorArray[i].lng, meteorArray[i].name)
-      // }
+      var markers = [];
+
+      for (var i = 0; i < meteorArray.length; ++i){
+        markers[i] = "something";
+
+        // new Position(meteorArray[i].lat, meteorArray[i].lng, meteorArray[i].name)
       //var marker = new Position(meteorArray[0].lat, meteorArray[0].lng, meteorArray[0].name)
-      var marker = new google.maps.Marker({
-      position:{lat: meteorArray[0].lat, lng: meteorArray[0].lng},
+
+      markers[i] = new google.maps.Marker({
+      position:{lat: meteorArray[i].lat, lng: meteorArray[i].lng},
       map: map1,
       title: 'meteor',
-      customInfo: meteorArray[0].name
+      customInfo: meteorArray[i].name,
+      id: i
       // icon: "<img src='/images/rock.png'>"
-    });
-      marker.addListener('click', function() {
-      map1.setCenter(marker.getPosition());
-      map1.setZoom(8);
-      // alert(meteorArray[0].name);
+      });
+
+       var infowindow = new google.maps.InfoWindow({
+        content: meteorArray[i].name
+       });
+
+       infowindow.open(map, markers[i]);
+        google.maps.event.addListener(markers[i], 'click', function () {
+        alert(markers[this.id].customInfo)
       })
+
+      // markers[i].addListener('click', function() {
+      // map1.setCenter(markers[i].getPosition());
+      // map1.setZoom(8);
+      // // alert(meteorArray[0].name);
+      // })
+
+      } //closes for loop
+
     });
+
   })
 
   // // search bar
