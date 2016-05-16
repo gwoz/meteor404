@@ -13,16 +13,6 @@ function initMap() {
     this.name = name;
   }
 
-  var Position = function(usrLat, usrLng, name){
-     new google.maps.Marker({
-      position:{lat: usrLat, lng: usrLng},
-      map: map1,
-      title: 'meteor',
-      customInfo: name
-      // icon: "<img src='/images/rock.png'>"
-    });
-  }
-
   var populateMeteors = function(response){
     for(var i = 0; i < response.length; i ++){
       meteorArray.push(new Meteor(parseFloat(response[i].reclat), parseFloat(response[i].reclong), response[i].name))
@@ -36,52 +26,35 @@ function initMap() {
       data: {fall: "Fell"}
     }).done(function(response){
       populateMeteors(response);
-      // for loop creating all meteor objects
-      var markers = [];
 
+      var markers = [];
       for (var i = 0; i < meteorArray.length; ++i){
         markers[i] = "something";
+        markers[i] = new google.maps.Marker({
+          position:{lat: meteorArray[i].lat, lng: meteorArray[i].lng},
+          map: map1,
+          title: 'meteor',
+          customInfo: meteorArray[i].name,
+          id: i
+        // icon: "<img src='/images/rock.png'>"
+        });
 
-        // new Position(meteorArray[i].lat, meteorArray[i].lng, meteorArray[i].name)
-      //var marker = new Position(meteorArray[0].lat, meteorArray[0].lng, meteorArray[0].name)
-
-      markers[i] = new google.maps.Marker({
-      position:{lat: meteorArray[i].lat, lng: meteorArray[i].lng},
-      map: map1,
-      title: 'meteor',
-      customInfo: meteorArray[i].name,
-      id: i
-      // icon: "<img src='/images/rock.png'>"
-      });
-
-       var infowindow = new google.maps.InfoWindow({
+        var infowindow = new google.maps.InfoWindow({
         content: meteorArray[i].name
-       });
+        });
 
-       infowindow.open(map, markers[i]);
+        infowindow.open(map, markers[i]);
         google.maps.event.addListener(markers[i], 'click', function () {
-        alert(markers[this.id].customInfo)
-      })
-
-      // markers[i].addListener('click', function() {
-      // map1.setCenter(markers[i].getPosition());
-      // map1.setZoom(8);
-      // // alert(meteorArray[0].name);
-      // })
-
-      } //closes for loop
-
+          map1.setCenter(markers[this.id].getPosition());
+          map1.setZoom(5);
+          alert(markers[this.id].customInfo)
+        })
+      }
     });
-
   })
 
-  // // search bar
+  // search bar
   // var input = document.getElementById('google-search-bar');
   // var searchBox = new google.maps.places.SearchBox(input);
   // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 }
-
-
-
-
-
