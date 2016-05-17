@@ -3,8 +3,12 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = Address.new(street: params[:address][:Street], state: params[:address][:State], city: params[:address][:City], country: params[:address][:Country], user_id: 1)
+    @address = Address.new(street: params[:address][:street], state: params[:address][:state], city: params[:address][:city], country: params[:address][:country], user_id: 1)
     @address.save
+
+    respond_to do |format|
+      format.json { render json: @address }
+    end
   end
 
   def show
@@ -20,8 +24,5 @@ class AddressesController < ApplicationController
   end
 end
 
-# user enters address
-# address gets saved 
-# map centers around that address
 
 

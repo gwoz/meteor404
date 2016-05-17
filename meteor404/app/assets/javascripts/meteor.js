@@ -23,7 +23,15 @@ function initMap() {
   $(document).ready(function(){
     $("#address-form-container").on("submit", '#address-form', function(event){
       event.preventDefault();
-      alert("huehweiouf");
+      var that = $(event.target).serialize()
+
+      $.ajax({
+      method: 'POST',
+      url: $(event.target).attr('action'),
+      data: $(event.target).serialize()
+      }).then(function(response) {
+        debugger;
+      });
     });
 
     $.ajax({
@@ -51,7 +59,7 @@ function initMap() {
         infowindow.open(map, markers[i]);
         google.maps.event.addListener(markers[i], 'click', function () {
           map1.setCenter(markers[this.id].getPosition());
-          map1.setZoom(5);
+          map1.setZoom(8);
           alert(markers[this.id].customInfo)
         })
       }
