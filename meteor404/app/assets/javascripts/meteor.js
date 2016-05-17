@@ -1,8 +1,8 @@
 meteorArray = []
 
-var map1;
+var map;
 function initMap() {
-  map1 = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.7128, lng: -74.0059},
     zoom: 6
   });
