@@ -1,27 +1,18 @@
-<%= form_for :address, :url => :addresses do |f| %>
-  <p>
-    <%= f.label :Street %><br>
+<%= form_for :address, :url => :addresses, :html => {:id => 'address-form'} do |f| %>
+    <%= f.label :Street %>
     <%= f.text_field :street %>
-  </p>
 
-  <p>
-    <%= f.label :City %><br>
+    <%= f.label :City %>
     <%= f.text_field :city %>
-  </p>
 
-  <p>
-    <%= f.label :State %><br>
+    <%= f.label :State %>
     <%= f.text_field :state %>
-  </p>
 
-  <p>
-    <%= f.label :Country %><br>
+    <%= f.label :Country %>
     <%= f.text_field :country %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
+    <br>
+    <br>
+    <%= f.submit 'Submit', class: "new-address-button" %>
 <% end %>
 
 

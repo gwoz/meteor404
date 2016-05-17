@@ -7,20 +7,10 @@ function initMap() {
     zoom: 6
   });
 
-
   var Meteor = function(lat, lng, name){
     this.lat = lat;
     this.lng = lng;
     this.name = name;
-  }
-
-  var Position = function(usrLat, usrLng){
-     new google.maps.Marker({
-      position:{lat: usrLat, lng: usrLng},
-      map: map,
-      title: 'meteor',
-      // icon: "<img src='/images/rock.png'>"
-    });
   }
 
   var populateMeteors = function(response){
@@ -31,31 +21,46 @@ function initMap() {
   }
 
   $(document).ready(function(){
+    $("#address-form-container").on("submit", '#address-form', function(event){
+      event.preventDefault();
+      alert("huehweiouf");
+    });
+
     $.ajax({
       url: 'https://data.nasa.gov/resource/gh4g-9sfh.json',
       data: {fall: "Fell"}
     }).done(function(response){
       populateMeteors(response);
-      for (var i = 0; i < meteorArray.length; i ++){
-        new Position(meteorArray[i].lat, meteorArray[i].lng)
+
+      var markers = [];
+      for (var i = 0; i < meteorArray.length; ++i){
+        markers[i] = "something";
+        markers[i] = new google.maps.Marker({
+          position:{lat: meteorArray[i].lat, lng: meteorArray[i].lng},
+          map: map1,
+          title: 'meteor',
+          customInfo: meteorArray[i].name,
+          id: i
+        // icon: "<img src='/images/rock.png'>"
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+        content: meteorArray[i].name
+        });
+
+        infowindow.open(map, markers[i]);
+        google.maps.event.addListener(markers[i], 'click', function () {
+          map1.setCenter(markers[this.id].getPosition());
+          map1.setZoom(5);
+          alert(markers[this.id].customInfo)
+        })
       }
-    })
+    });
+
   })
 
   // search bar
-  var input = document.getElementById('google-search-bar');
-  var searchBox = new google.maps.places.SearchBox(input);
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-  // bias search bar to current window
-  map.addListener('bounds_changed', function() {
-    searchBox.setBounds(map.getBounds());
-  });
-
-  
+  // var input = document.getElementById('google-search-bar');
+  // var searchBox = new google.maps.places.SearchBox(input);
+  // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 }
-
-
-
-
-
