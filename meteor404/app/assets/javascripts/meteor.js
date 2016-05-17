@@ -21,6 +21,11 @@ function initMap() {
   }
 
   $(document).ready(function(){
+    $("#address-form-container").on("submit", '#address-form', function(event){
+      event.preventDefault();
+      alert("huehweiouf");
+    });
+
     $.ajax({
       url: 'https://data.nasa.gov/resource/gh4g-9sfh.json',
       data: {fall: "Fell"}
@@ -51,6 +56,7 @@ function initMap() {
         })
       }
     });
+
   })
 
   // search bar
