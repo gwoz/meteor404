@@ -1,6 +1,7 @@
 meteorArray = []
 
 var map1;
+var map2;
 function initMap() {
   map1 = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.7128, lng: -74.0059},
@@ -30,7 +31,14 @@ function initMap() {
       url: $(event.target).attr('action'),
       data: $(event.target).serialize()
       }).then(function(response) {
-        debugger;
+
+        function initMap() {
+          map2 = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 40.7128, lng: -74.0059},
+            zoom: 6
+          });
+        }
+
       });
     });
 
