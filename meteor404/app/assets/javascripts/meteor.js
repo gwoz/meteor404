@@ -13,16 +13,6 @@ function initMap() {
     this.name = name;
   }
 
-  var Position = function(usrLat, usrLng, name){
-     new google.maps.Marker({
-      position:{lat: usrLat, lng: usrLng},
-      map: map1,
-      title: 'meteor',
-      customInfo: name
-      // icon: "<img src='/images/rock.png'>"
-    });
-  }
-
   var populateMeteors = function(response){
     for(var i = 0; i < response.length; i ++){
       meteorArray.push(new Meteor(parseFloat(response[i].reclat), parseFloat(response[i].reclong), response[i].name))
@@ -31,36 +21,46 @@ function initMap() {
   }
 
   $(document).ready(function(){
+    $("#address-form-container").on("submit", '#address-form', function(event){
+      event.preventDefault();
+      alert("huehweiouf");
+    });
+
     $.ajax({
       url: 'https://data.nasa.gov/resource/gh4g-9sfh.json',
       data: {fall: "Fell"}
     }).done(function(response){
       populateMeteors(response);
-      // for loop creating all meteor objects
-      // for (var i = 0; i < meteorArray.length; i ++){
-      //   new Position(meteorArray[i].lat, meteorArray[i].lng, meteorArray[i].name)
-      // }
-      //var marker = new Position(meteorArray[0].lat, meteorArray[0].lng, meteorArray[0].name)
-      var marker = new google.maps.Marker({
-      position:{lat: meteorArray[0].lat, lng: meteorArray[0].lng},
-      map: map1,
-      title: 'meteor',
-      customInfo: meteorArray[0].name
-      // icon: "<img src='/images/rock.png'>"
+
+      var markers = [];
+      for (var i = 0; i < meteorArray.length; ++i){
+        markers[i] = "something";
+        markers[i] = new google.maps.Marker({
+          position:{lat: meteorArray[i].lat, lng: meteorArray[i].lng},
+          map: map1,
+          title: 'meteor',
+          customInfo: meteorArray[i].name,
+          id: i
+        // icon: "<img src='/images/rock.png'>"
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+        content: meteorArray[i].name
+        });
+
+        infowindow.open(map, markers[i]);
+        google.maps.event.addListener(markers[i], 'click', function () {
+          map1.setCenter(markers[this.id].getPosition());
+          map1.setZoom(5);
+          alert(markers[this.id].customInfo)
+        })
+      }
     });
-      marker.addListener('click', function() {
-      alert("jfwiojoi");
-      })
-    });
+
   })
 
-  // // search bar
+  // search bar
   // var input = document.getElementById('google-search-bar');
   // var searchBox = new google.maps.places.SearchBox(input);
   // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 }
-
-
-
-
-
