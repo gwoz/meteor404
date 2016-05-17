@@ -32,12 +32,7 @@ function initMap() {
       data: $(event.target).serialize()
       }).then(function(response) {
 
-        function initMap() {
-          map2 = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 40.7128, lng: -74.0059},
-            zoom: 6
-          });
-        }
+      map1.setCenter(new google.maps.LatLng(30.4343, -54.324  ));
 
       });
     });
