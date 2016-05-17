@@ -7,11 +7,11 @@
     <h1>Meteor 404</h1>
     <input id="google-search-bar" type="text" placeholder="enter an address" autocomplete="off" >
     <div id="map"> </div>
-    <h2>Address</h2>
-    <%= render 'addresses/form' %>
-  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLEMAPSAPI"] %>&callback=initMap"
-  async defer>
-  </script>
+      <h2>Address</h2>
+      <%= render 'addresses/form' %>
+      <script src="https://maps.googleapis.com/maps/api/js?v=3&key=<%=ENV['GOOGLEMAPSAPI']%>&callback=initMap"
+      async defer>
+    </script>
   </body>
 
 </html>
