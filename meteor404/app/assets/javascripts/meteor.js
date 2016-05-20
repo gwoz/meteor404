@@ -41,11 +41,11 @@ function initMap() {
       populateMeteors(response);
 
       var markers = [];
-      for (var i = 0; i < meteorArray.length; ++i){
+      for (var i = 0; i < meteorArray.length; i++){
         markers[i] = "something";
         markers[i] = new google.maps.Marker({
           position:{lat: meteorArray[i].lat, lng: meteorArray[i].lng},
-          map: map1,
+          map: map,
           title: 'meteor',
           customInfo: meteorArray[i].name,
           id: i
@@ -56,11 +56,12 @@ function initMap() {
         content: meteorArray[i].name
         });
 
-        infowindow.open(map, markers[i]);
+        // infowindow.open(map, markers[i]);
         google.maps.event.addListener(markers[i], 'click', function () {
-          map1.setCenter(markers[this.id].getPosition());
-          map1.setZoom(8);
-          alert(markers[this.id].customInfo)
+          infowindow.open(map, markers[i]);
+          map.setCenter(markers[this.id].getPosition());
+          map.setZoom(8);
+          // alert(markers[this.id].customInfo)
         })
       }
     });
