@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  match '*path', via: [:get, :post], :controller => 'application', :action => 'handle_options_request', :constraints => {:method => 'OPTIONS'}
   # You can have the root of your site routed with "root"
   root 'meteors#index'
 

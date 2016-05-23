@@ -57,7 +57,9 @@ function initMap() {
           position:{lat: meteorArray[i].lat, lng: meteorArray[i].lng},
           map: map1,
           title: 'meteor',
-          customInfo: meteorArray[i].name,
+          name: meteorArray[i].name,
+          lat: meteorArray[i].lat,
+          lng: meteorArray[i].lng,
           id: i
         // icon: "<img src='/images/rock.png'>"
         });
@@ -70,6 +72,20 @@ function initMap() {
         google.maps.event.addListener(markers[i], 'click', function () {
           map1.setCenter(markers[this.id].getPosition());
           map1.setZoom(8);
+          var data = {name: this.name, lat: this.lat, lng: this.lng}
+          var json = JSON.stringify(data)
+
+          $.ajax({
+            url: 'http://www.localhost:3000/meteors',
+            type: 'POST',
+            headers: {
+              'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'
+            },
+            data: json,
+            dataType: "json"
+          }).done(function(response){
+            debugger;
+          })
           // alert(markers[this.id].customInfo)
         })
       }
@@ -77,7 +93,7 @@ function initMap() {
 
   })
 
-  
+
 
   // search bar
   // var input = document.getElementById('google-search-bar');
