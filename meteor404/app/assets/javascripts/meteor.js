@@ -70,12 +70,14 @@ function initMap() {
         google.maps.event.addListener(markers[i], 'click', function () {
           map1.setCenter(markers[this.id].getPosition());
           map1.setZoom(8);
-          alert(markers[this.id].customInfo)
+          // alert(markers[this.id].customInfo)
         })
       }
     });
 
   })
+
+  
 
   // search bar
   // var input = document.getElementById('google-search-bar');

@@ -39,8 +39,9 @@ ActiveRecord::Schema.define(version: 20160407202555) do
     t.float    "reclat"
     t.float    "reclong"
     t.string   "geolocation"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "favorite",    default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -11,6 +11,7 @@ class CreateMeteors < ActiveRecord::Migration
       t.float :reclat
       t.float :reclong
       t.string :geolocation
+      t.boolean :favorite, default: false
 
       t.timestamps null: false
     end
