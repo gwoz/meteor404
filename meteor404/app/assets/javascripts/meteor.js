@@ -1,7 +1,6 @@
 meteorArray = []
 
 var map1;
-var map2;
 function initMap() {
   map1 = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.7128, lng: -74.0059},
@@ -31,8 +30,18 @@ function initMap() {
       url: $(event.target).attr('action'),
       data: $(event.target).serialize()
       }).then(function(response) {
+        var street = response.street.split(" ").join("+").replace(/['"]+/g, '')
+        // if (street.charAt(0) === '"' && street.charAt(street.length -1) === '"') {
+        //       street = street.substr(1,street.length -2);
+        //   }
+        street = street.replace(/"([^"]+(?="))"/g, '$1')
+        var city = response.city.split(" ")
+        var state = response.state
 
-      map1.setCenter(new google.maps.LatLng(30.4343, -54.324  ));
+        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+ street + "+"+city+"+"+state+"&key=AIzaSyAtWTdK0yz27ukjOCJ-riZzWtIguLOW-sU", function(response){
+
+          map1.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng  ));
+        });
 
       });
     });
