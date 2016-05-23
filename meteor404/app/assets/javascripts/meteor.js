@@ -36,7 +36,8 @@ function initMap() {
 
         $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+ street + "+"+city+"+"+state+"&key=AIzaSyAtWTdK0yz27ukjOCJ-riZzWtIguLOW-sU", function(response){
 
-          map1.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng  ));
+          map1.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng));
+          map1.setZoom(6);
         });
 
       });
