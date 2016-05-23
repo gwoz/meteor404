@@ -30,12 +30,8 @@ function initMap() {
       url: $(event.target).attr('action'),
       data: $(event.target).serialize()
       }).then(function(response) {
-        var street = response.street.split(" ").join("+").replace(/['"]+/g, '')
-        // if (street.charAt(0) === '"' && street.charAt(street.length -1) === '"') {
-        //       street = street.substr(1,street.length -2);
-        //   }
-        street = street.replace(/"([^"]+(?="))"/g, '$1')
-        var city = response.city.split(" ")
+        var street = response.street
+        var city = response.city
         var state = response.state
 
         $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+ street + "+"+city+"+"+state+"&key=AIzaSyAtWTdK0yz27ukjOCJ-riZzWtIguLOW-sU", function(response){
