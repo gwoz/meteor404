@@ -19,8 +19,10 @@ html, body {
 }
 
 #map {
-  width: 100%;
+  width: 50%;
   height: 50%;
+  position: relative;
+  display: block;
 }
 
 #google-search-bar{
@@ -35,3 +37,5 @@ form {
   border-radius: 5px;
   text-align: center
 }
+
+

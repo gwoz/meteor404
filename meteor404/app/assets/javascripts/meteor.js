@@ -4,7 +4,7 @@ var map1;
 function initMap() {
   map1 = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.7128, lng: -74.0059},
-    zoom: 6
+    zoom: 4
   });
 
   var Meteor = function(lat, lng, name, mass, year){

@@ -5,16 +5,18 @@
   </head>
   <body>
     <h1>Meteor 404</h1>
-    <input id="google-search-bar" type="text" placeholder="enter an address" autocomplete="off" >
+    <!-- <input id="google-search-bar" type="text" placeholder="enter an address" autocomplete="off" > -->
     <div id="map"> </div>
-    
+
     <div id='address-form-container'>
     <h2>Find a Meteor Near You!</h2>
       <%= render 'addresses/form' %>
     </div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLEMAPSAPI"] %>&callback=initMap"
-  async defer>
-  </script>
+    <div id="google-map-index">
+      <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLEMAPSAPI"] %>&callback=initMap"
+      async defer>
+      </script> 
+    </div>
     <div id="meteor-show-container">
 
     </div>
