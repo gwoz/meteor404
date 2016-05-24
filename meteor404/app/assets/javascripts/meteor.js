@@ -88,6 +88,7 @@ function initMap() {
               alert("oiwjfiojefio")
             },
             error: function(response){
+              $("#address-form-container").hide()
               $("#meteor-show-container").html(response.responseText)
             }
           })
