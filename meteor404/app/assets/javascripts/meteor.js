@@ -76,11 +76,8 @@ function initMap() {
           var json = JSON.stringify(data)
 
           $.ajax({
-            url: 'http://www.localhost:3000/meteors',
+            url: 'http://www.localhost:3000/meteors'+"?&authenticity_token=" + AUTH_TOKEN,
             type: 'POST',
-            headers: {
-              'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'
-            },
             data: json,
             dataType: "json"
           }).done(function(response){

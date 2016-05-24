@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   def handle_options_request
     head(:ok) if request.request_method == "OPTIONS"
   end
-
+  skip_before_action :verify_authenticity_token
   after_filter :set_access_control_headers
 
   def set_access_control_headers
