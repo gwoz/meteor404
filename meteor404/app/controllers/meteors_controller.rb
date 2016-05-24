@@ -6,9 +6,12 @@ class MeteorsController < ApplicationController
 
   def create
     binding.pry
-    @meteor = Meteor.new(params[:meteor])
-    @meteor.save
+    if request.xhr?
+      @meteor = Meteor.new(params[:meteor])
+      @meteor.save
 
+      render ""
+    end
 
   end
 

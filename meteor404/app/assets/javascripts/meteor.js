@@ -55,7 +55,7 @@ function initMap() {
 
       var markers = [];
       for (var i = 0; i < meteorArray.length; ++i){
-        markers[i] = "something";
+        markers[i] = "var";
         markers[i] = new google.maps.Marker({
           position:{lat: meteorArray[i].lat, lng: meteorArray[i].lng},
           map: map1,
