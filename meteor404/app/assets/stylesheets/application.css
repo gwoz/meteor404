@@ -21,8 +21,10 @@ html, body {
 #map {
   width: 50%;
   height: 50%;
-  position: relative;
-  display: block;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  padding: 0;
 }
 
 #google-search-bar{
@@ -33,9 +35,22 @@ html, body {
 }
 /*Form */
 
+#address-form-container {
+  position: absolute;
+  display: inline-block;
+  right: 2rem;
+  top: 8.5rem;
+}
+
 form {
   border-radius: 5px;
-  text-align: center
+  text-align: left;
+  top: 0;
+  left: 0;
+}
+
+input {
+  display: block;
 }
 
 
