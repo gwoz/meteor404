@@ -5,14 +5,10 @@ class MeteorsController < ApplicationController
   end
 
   def create
-    binding.pry
-    if request.xhr?
-      @meteor = Meteor.new(params[:meteor])
-      @meteor.save
+    @meteor = Meteor.new(name: params[:name], mass: params[:mass], year: params[:year], reclat: params[:lat], reclong: params[:lng])
+    @meteor.save
 
-      render ""
-    end
-
+    render '_meteor_details_section', locals: { meteor: @meteor}, layout: false
   end
 
   def show
