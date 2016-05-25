@@ -98,7 +98,12 @@ function initMap() {
 
     $("#meteor-show-container").on("submit", "#meteor-show-button",function(event){
       event.preventDefault();
-      alert("fieuhfio")
+      var lat = $("#lat").val();
+      var lng = $("#lng").val();
+      var street = $("#street").val();
+      var city = $("#city").val();
+      var state = $("#state").val();
+      var country = $("#country").val();
       debugger
     })
 
