@@ -12,6 +12,7 @@ class MeteorsController < ApplicationController
   end
 
   def show
+    
     @meteor = Meteor.find(params[:id])
   end
 

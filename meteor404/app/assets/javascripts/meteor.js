@@ -96,12 +96,15 @@ function initMap() {
       }
     });
 
+    $("#meteor-show-container").on("click", "#meteor-show-link",function(event){
+      event.preventDefault();
+      alert("fieuhfio")
+    })
+
   })
-
-
-
   // search bar
   // var input = document.getElementById('google-search-bar');
   // var searchBox = new google.maps.places.SearchBox(input);
   // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 }
+
