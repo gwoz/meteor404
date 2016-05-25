@@ -72,8 +72,8 @@ function initMap() {
         var infowindow = new google.maps.InfoWindow({
         content: meteorArray[i].name
         });
+        // infowindow.open(map, markers[i]);
 
-        infowindow.open(map, markers[i]);
         google.maps.event.addListener(markers[i], 'click', function () {
           map1.setCenter(markers[this.id].getPosition());
           map1.setZoom(8);

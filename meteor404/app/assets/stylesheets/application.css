@@ -2,8 +2,8 @@
 
 h1, h2, body, form {
   font-family: monospace;
-  padding: 0.25em;
-  text-align: center;
+  /*padding: 0.25em;*/
+  text-align: left;
   background-color: #000219;
   color: white;
 }
@@ -53,4 +53,10 @@ input {
   display: block;
 }
 
-
+#meteor-show-container {
+  position: absolute;
+  display: block;
+  right: 2rem;
+  top: 5.5rem;
+  width: 45%;
+}
