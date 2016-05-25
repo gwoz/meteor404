@@ -12,7 +12,8 @@ class MeteorsController < ApplicationController
   end
 
   def show
-    
+    binding.pry
+    @address = Address.new
     @meteor = Meteor.find(params[:id])
   end
 
