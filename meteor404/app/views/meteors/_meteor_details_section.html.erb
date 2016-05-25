@@ -6,4 +6,10 @@
 
 <%= link_to("Would you like directions to this Meteor?", @meteor, id: 'meteor-show-link') %>
 
+<%= form_for :meteor, :html => {id: 'meteor-show-button'} do |f| %>
+  <%= hidden_field_tag(:lat, @meteor.reclat) %>
+  <%= hidden_field_tag(:lng, @meteor.reclong) %>
+  <%= f.submit "Would you like directions to this Meteor?" %>
+<% end %>
+
 

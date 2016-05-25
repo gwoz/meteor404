@@ -96,9 +96,10 @@ function initMap() {
       }
     });
 
-    $("#meteor-show-container").on("click", "#meteor-show-link",function(event){
+    $("#meteor-show-container").on("submit", "#meteor-show-button",function(event){
       event.preventDefault();
       alert("fieuhfio")
+      debugger
     })
 
   })
