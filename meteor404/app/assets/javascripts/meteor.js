@@ -24,6 +24,12 @@ function initMap() {
   }
 
   $(document).ready(function(){
+//     $.ajaxSetup({ 
+//     beforeSend:function(xhr, settings){
+//         xhr.setRequestHeader('X-CSRF-Token', '<%= csrf_token_value %>');
+//     } 
+// });
+
     $("#address-form-container").on("submit", '#address-form', function(event){
       event.preventDefault();
       var that = $(event.target).serialize()
@@ -104,7 +110,24 @@ function initMap() {
       var city = $("#city").val();
       var state = $("#state").val();
       var country = $("#country").val();
-      debugger
+
+      $.ajax({
+        url: "http://www.mapquestapi.com/directions/v2/route?key=WydtNhweQgoQU0wTEAvVB3exkImGPfaF&callback=renderAdvancedNarrative&ambiguities=ignore&avoidTimedConditions=false&doReverseGeocode=true&outFormat=json&routeType=fastest&timeType=1&enhancedNarrative=false&shapeFormat=raw&generalize=0&locale=en_US&unit=m&from=Clarendon Blvd, Arlington, VA&to=2400 S Glebe Rd, Arlington, VA&drivingStyle=2&highwayEfficiency=21.0",
+            type: 'get',
+            dataType: "json",
+            success: function(response){
+              alert("success")
+            },
+            error: function(response){
+              debugger;
+              $("#directions-form-container").html(response.responseText)
+            }
+      })
+
+      // $.get("http://www.mapquestapi.com/directions/v2/route?key=WydtNhweQgoQU0wTEAvVB3exkImGPfaF&from=Lancaster,PA&to=York,PA&callback=renderNarrative", function(response){
+      //   alert("ioehfoeiw")
+      //     console.log(response)
+      //   });
     })
 
   })
