@@ -1,12 +1,14 @@
 class MeteorsController < ApplicationController
   # before_action :find_meteor
-
   def index
   end
 
   def create
-    @meteor = Meteor.new(params[:meteor])
-    @meteor.save
+    binding.pry
+    # @meteor = Meteor.new(params[:meteor])
+    # @meteor.save
+
+
   end
 
   def show
