@@ -2,8 +2,8 @@
 
 h1, h2, body, form {
   font-family: monospace;
-  padding: 0.25em;
-  text-align: center;
+  /*padding: 0.25em;*/
+  text-align: left;
   background-color: #000219;
   color: white;
 }
@@ -18,7 +18,12 @@ html, body {
   padding: 0;
 }
 
+header {
+  margin-left: 1.5rem;
+}
+
 #map {
+  margin-left: 1.5rem;
   width: 50%;
   height: 50%;
   position: absolute;
@@ -51,6 +56,13 @@ form {
 
 input {
   display: block;
+  width: 100%;
 }
 
-
+#meteor-show-container {
+  position: absolute;
+  display: block;
+  right: 2rem;
+  top: 5.5rem;
+  width: 45%;
+}

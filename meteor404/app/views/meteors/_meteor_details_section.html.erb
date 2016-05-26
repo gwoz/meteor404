@@ -1,6 +1,9 @@
 <h1>Meteor Name: <%= @meteor.name %></h1>
-<h2>mass: <%= @meteor.mass %></h3>
 
-<%= link_to("Would you like directions to this Meteor?", @meteor) %>
+<h3>approx mass: <%= @meteor.mass %> kg</h3>
+<h3>year entered atmosphere: <%= @meteor.year %></h3>
+<h3>approx lat/long: <%= @meteor.reclat %>  <%= @meteor.reclong %></h3>
+
+<%= link_to("Would you like directions to this Meteor?", @meteor, id: 'meteor-show-link') %>
 
 
