@@ -30,17 +30,13 @@ ActiveRecord::Schema.define(version: 20160407202555) do
 
   create_table "meteors", force: :cascade do |t|
     t.string   "name"
-    t.integer  "meteor_id"
-    t.string   "nametype"
-    t.string   "recclass"
     t.integer  "mass"
-    t.string   "fall"
     t.integer  "year"
     t.float    "reclat"
     t.float    "reclong"
-    t.string   "geolocation"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "favorite",   default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "users", force: :cascade do |t|

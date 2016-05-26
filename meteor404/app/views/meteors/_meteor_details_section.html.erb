@@ -1,0 +1,27 @@
+<h1>Meteor Name: <%= @meteor.name %></h1>
+
+<h3>approx mass: <%= @meteor.mass %> kg</h3>
+<h3>year entered atmosphere: <%= @meteor.year %></h3>
+<h3>approx lat/long: <%= @meteor.reclat %>  <%= @meteor.reclong %></h3>
+
+<%= form_for :address, :html => {id: 'meteor-show-button'} do |f| %>
+  <%= hidden_field_tag(:lat, @meteor.reclat, :input_html => {:id => "lat"}) %>
+  <%= hidden_field_tag(:lng, @meteor.reclong, :input_html => {:id => "lng"}) %>
+
+  <%= f.label :Street %>
+  <%= f.text_field :street, id: "street" %>
+
+  <%= f.label :City %>
+  <%= f.text_field :city, id: "city" %>
+
+  <%= f.label :State %>
+  <%= f.text_field :state, id: "state" %>
+
+  <%= f.label :Country %>
+  <%= f.text_field :country, id: "country" %>
+  
+  <%= f.submit "Get directions to this Meteor" %>
+<% end %>
+
+
+
