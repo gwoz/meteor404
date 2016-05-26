@@ -4,7 +4,7 @@ var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.7128, lng: -74.0059},
-    zoom: 6
+    zoom: 4
   });
 
   var Meteor = function(lat, lng, name, mass, year){
@@ -88,6 +88,7 @@ function initMap() {
               alert("oiwjfiojefio")
             },
             error: function(response){
+              $("#address-form-container").hide()
               $("#meteor-show-container").html(response.responseText)
             }
           })
