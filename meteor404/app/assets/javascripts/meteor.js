@@ -30,7 +30,15 @@ function initMap() {
       url: $(event.target).attr('action'),
       data: $(event.target).serialize()
       }).then(function(response) {
-        debugger;
+        var street = response.street
+        var city = response.city
+        var state = response.state
+
+        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+ street + "+"+city+"+"+state+"&key=AIzaSyAtWTdK0yz27ukjOCJ-riZzWtIguLOW-sU", function(response){
+
+          map1.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng  ));
+        });
+
       });
     });
 
