@@ -6,8 +6,8 @@ class MeteorsController < ApplicationController
 
   def create
     binding.pry
-    # @meteor = Meteor.new(params[:meteor])
-    # @meteor.save
+    @meteor = Meteor.new(params[:meteor])
+    @meteor.save
 
 
   end

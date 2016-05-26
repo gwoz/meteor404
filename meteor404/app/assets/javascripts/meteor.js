@@ -73,17 +73,15 @@ function initMap() {
           map1.setCenter(markers[this.id].getPosition());
           map1.setZoom(8);
           var data = {name: this.name, lat: this.lat, lng: this.lng}
-          var json = JSON.stringify(data)
 
           $.ajax({
-            url: 'http://www.localhost:3000/meteors'+"?&authenticity_token=" + AUTH_TOKEN,
+            url: 'http://www.localhost:3000/meteors',
             type: 'POST',
-            data: json,
+            data: data,
             dataType: "json"
           }).done(function(response){
             debugger;
           })
-          // alert(markers[this.id].customInfo)
         })
       }
     });
