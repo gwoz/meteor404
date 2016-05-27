@@ -112,14 +112,18 @@ function initMap() {
       var country = $("#country").val();
       var data = {lat: lat, lng: lng, street: street, city: city, state: state, country: country}
 
-
       $.ajax({
         url: 'http://www.localhost:3000/addresses',
         type: 'POST',
         data: data,
-        dataType: "json"
-      }).done(function(response){
-        debugger;
+        dataType: "json", 
+        success: function(response){
+          alert("hit the success")
+          debugger;
+        },
+        error: function(response){
+          debugger;
+        }
       })
 
 
