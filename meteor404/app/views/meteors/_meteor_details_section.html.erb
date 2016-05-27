@@ -4,7 +4,7 @@
 <h3>year entered atmosphere: <%= @meteor.year %></h3>
 <h3>approx lat/long: <%= @meteor.reclat %>  <%= @meteor.reclong %></h3>
 
-<%= form_for :address, :html => {id: 'meteor-show-button'} do |f| %>
+<%= form_for :address, :html => {id: 'meteor-show-button'},url: { controller: "addresses", action: "create" } do |f| %>
   <%= hidden_field_tag(:lat, @meteor.reclat, :input_html => {:id => "lat"}) %>
   <%= hidden_field_tag(:lng, @meteor.reclong, :input_html => {:id => "lng"}) %>
 
@@ -22,6 +22,5 @@
   
   <%= f.submit "Get directions to this Meteor" %>
 <% end %>
-
 
 
