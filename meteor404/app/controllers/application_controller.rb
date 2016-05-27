@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::Base
+  # respond_to :html, :json
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+
+
   def handle_options_request
     head(:ok) if request.request_method == "OPTIONS"
   end
