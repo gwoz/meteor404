@@ -44,10 +44,10 @@ function initMap() {
         var city = response.city
         var state = response.state
         form.reset();
-        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+street+"+"+city+"+"+state+"&key=AIzaSyAtWTdK0yz27ukjOCJ-riZzWtIguLOW-sU", function(response){
+        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+street+"+"+city+"+"+state+"&key=<%= ENV['GOOGLEMAPSAPI'] %>", function(response){
 
-          map1.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng));
-          map1.setZoom(6);
+          map.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng));
+          map.setZoom(6);
         });
 
       });
@@ -64,25 +64,25 @@ function initMap() {
         markers[i] = "var";
         markers[i] = new google.maps.Marker({
           position:{lat: meteorArray[i].lat, lng: meteorArray[i].lng},
-          map: map1,
+          map: map,
           title: 'meteor',
           name: meteorArray[i].name,
           lat: meteorArray[i].lat,
           lng: meteorArray[i].lng,
           mass: meteorArray[i].mass,
           year: meteorArray[i].year,
-          id: i
-        // icon: "<img src='/images/rock.png'>"
+          id: i,
+        icon: "<image_path('rock.png')>"
         });
 
-        var infowindow = new google.maps.InfoWindow({
-        content: meteorArray[i].name
-        });
+        // var infowindow = new google.maps.InfoWindow({
+        // content: meteorArray[i].name
+        // });
         // infowindow.open(map, markers[i]);
 
         google.maps.event.addListener(markers[i], 'click', function () {
-          map1.setCenter(markers[this.id].getPosition());
-          map1.setZoom(8);
+          map.setCenter(markers[this.id].getPosition());
+          map.setZoom(8);
           var data = {name: this.name, lat: this.lat, lng: this.lng, mass: this.mass, year: this.year}
 
           $.ajax({
