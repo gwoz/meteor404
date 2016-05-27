@@ -44,7 +44,7 @@ function initMap() {
         var city = response.city
         var state = response.state
         form.reset();
-        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+street+"+"+city+"+"+state+"&key=AIzaSyAtWTdK0yz27ukjOCJ-riZzWtIguLOW-sU", function(response){
+        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+street+"+"+city+"+"+state+"&key=<%= ENV['GOOGLEMAPSAPI'] %>", function(response){
 
           map.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng));
           map.setZoom(6);
@@ -75,9 +75,9 @@ function initMap() {
         // icon: "<img src='/images/rock.png'>"
         });
 
-        var infowindow = new google.maps.InfoWindow({
-        content: meteorArray[i].name
-        });
+        // var infowindow = new google.maps.InfoWindow({
+        // content: meteorArray[i].name
+        // });
         // infowindow.open(map, markers[i]);
 
         google.maps.event.addListener(markers[i], 'click', function () {
