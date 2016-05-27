@@ -15,9 +15,7 @@ class AddressesController < ApplicationController
     end
 
     binding.pry
-    # directions["routes"][0]["legs"][0]["steps"][0]
 
-    # binding.pry
     # @address = Address.new(street: params[:address][:street], state: params[:address][:state], city: params[:address][:city], country: params[:address][:country], user_id: 1)
     # @address.save
 
