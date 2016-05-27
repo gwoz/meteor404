@@ -118,12 +118,10 @@ function initMap() {
         data: data,
         dataType: "json", 
         success: function(response){
-          alert("hit the success")
-          debugger;
+
+          $("#directions-form-container").html(response)
+
         },
-        error: function(response){
-          debugger;
-        }
       })
 
 
