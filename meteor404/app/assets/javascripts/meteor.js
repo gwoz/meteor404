@@ -71,8 +71,8 @@ function initMap() {
           lng: meteorArray[i].lng,
           mass: meteorArray[i].mass,
           year: meteorArray[i].year,
-          id: i
-        // icon: "<img src='/images/rock.png'>"
+          id: i,
+        icon: "<image_path('rock.png')>"
         });
 
         // var infowindow = new google.maps.InfoWindow({
