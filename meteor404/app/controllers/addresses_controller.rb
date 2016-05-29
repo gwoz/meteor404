@@ -8,9 +8,14 @@ class AddressesController < ApplicationController
   end
 
   def create
+    street = params["street"]
+    city = params["city"]
+    state = params["state"]
+    country = params["country"]
+    lat = params["lat"]
+    lng = params["lng"]
 
-
-    directions = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal")
+    directions = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{street}+#{city}+#{state}&destination=#{lat}+#{lng}")
     @step_list = []
 
     direction_list = directions["routes"][0]["legs"][0]["steps"].each do |step|
