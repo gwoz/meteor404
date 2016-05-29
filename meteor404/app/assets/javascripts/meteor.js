@@ -16,7 +16,6 @@ function initMap() {
   }
 
   var populateMeteors = function(response){
-
     for(var i = 0; i < response.length; i ++){
       meteorArray.push(new Meteor(parseFloat(response[i].reclat), parseFloat(response[i].reclong), response[i].name, response[i].mass, response[i].year))
     }
@@ -24,12 +23,6 @@ function initMap() {
   }
 
   $(document).ready(function(){
-//     $.ajaxSetup({ 
-//     beforeSend:function(xhr, settings){
-//         xhr.setRequestHeader('X-CSRF-Token', '<%= csrf_token_value %>');
-//     } 
-// });
-
     $("#address-form-container").on("submit", '#address-form', function(event){
       event.preventDefault();
       var that = $(event.target).serialize()
@@ -71,14 +64,8 @@ function initMap() {
           lng: meteorArray[i].lng,
           mass: meteorArray[i].mass,
           year: meteorArray[i].year,
-          id: i,
-        // icon: "<image_path('rock.png')>"
+          id: i
         });
-
-        // var infowindow = new google.maps.InfoWindow({
-        // content: meteorArray[i].name
-        // });
-        // infowindow.open(map, markers[i]);
 
         google.maps.event.addListener(markers[i], 'click', function () {
           map.setCenter(markers[this.id].getPosition());
@@ -123,14 +110,7 @@ function initMap() {
           $("#meteor-show-button").hide()
         },
       })
-
-
     })
-
   })
-  // search bar
-  // var input = document.getElementById('google-search-bar');
-  // var searchBox = new google.maps.places.SearchBox(input);
-  // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 }
 
