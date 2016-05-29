@@ -119,8 +119,8 @@ function initMap() {
         dataType: "json", 
         success: function(response){
 
-          $("#directions-form-container").html(response)
-
+          $("#meteor-show-container").html(response)
+          $("#meteor-show-button").hide()
         },
       })
 
