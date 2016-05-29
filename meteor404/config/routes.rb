@@ -13,5 +13,5 @@ Rails.application.routes.draw do
     resources :meteors, only: [:index, :create, :show]
     resources :users, except: :index
     resources :addresses, except: [:edit, :update, :delete]
-
+    post 'addresses/center_map', :to => 'addresses#center_map'
 end

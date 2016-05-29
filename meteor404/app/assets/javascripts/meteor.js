@@ -29,16 +29,14 @@ function initMap() {
       var form = this;
 
       $.ajax({
-      method: 'POST',
-      url: $(event.target).attr('action'),
+      method: 'post',
+      url: "http://localhost:3000/addresses/center_map",
       data: $(event.target).serialize()
       }).then(function(response) {
-        var street = response.street
         var city = response.city
         var state = response.state
         form.reset();
-        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+street+"+"+city+"+"+state+"&key=<%= ENV['GOOGLEMAPSAPI'] %>", function(response){
-
+        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+city+"+"+state+"", function(response){
           map.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng));
           map.setZoom(6);
         });
@@ -103,6 +101,7 @@ function initMap() {
         url: 'http://www.localhost:3000/addresses',
         type: 'POST',
         data: data,
+        headers: {"X-Requested-With":"XMLHttpRequest"},
         dataType: "json", 
         success: function(response){
 
