@@ -1,8 +1,5 @@
-/*General */
-
-h1, h2, body, form {
+h1, h2, body, form, a {
   font-family: monospace;
-  /*padding: 0.25em;*/
   text-align: left;
   background-color: #000219;
   color: white;
