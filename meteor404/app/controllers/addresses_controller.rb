@@ -4,10 +4,6 @@ class AddressesController < ApplicationController
   def index
   end
 
-  def new
-    @address = Address.new
-  end
-
   def create
     street = params["street"]
     city = params["city"]
@@ -22,21 +18,13 @@ class AddressesController < ApplicationController
     direction_list = directions["routes"][0]["legs"][0]["steps"].each do |step|
       @step_list << step["html_instructions"]
     end
-  
     render json: @step_list 
-
   end
 
   def center_map
-
     @address = Address.new(city: params["address"]["city"], state: params["address"]["state"])
     render json: @address
   end
-
-  def show
-  end
-
-
 
   private
 
