@@ -116,8 +116,8 @@ function initMap() {
         headers: {"X-Requested-With":"XMLHttpRequest"},
         dataType: "json", 
         success: function(response){
-          $("#meteor-show-container").html(response);
-          $("#meteor-show-button").hide();
+          $("#meteor-show-container").hide();
+          $("#directions-container").html(response);
         },
       });
     });
