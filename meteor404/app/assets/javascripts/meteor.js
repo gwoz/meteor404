@@ -99,6 +99,7 @@ function initMap() {
       $("#address-form-container").show();
     })
 
+    // Return to map from directions-container
     $("#find_another_meteor").on("click", function(event){
       event.preventDefault();
       $("#directions-container").hide();
