@@ -6,35 +6,33 @@
   <body>
     <header>
       <h1>Meteor 404</h1>
+      <h3>Click on a Meteor to See it's Details</h3>
     </header>
-    <!-- <input id="google-search-bar" type="text" placeholder="enter an address" autocomplete="off" > -->
-    <h3>Click on a Meteor to See it's Details</h3>
 
     <div id="map"> </div>
     
     <div id='address-form-container'>
       <h2>Center the Map On Your Region</h2>
-
-      <h3></h3>
       <%= render 'addresses/form' %>
     </div>
+
     <div id="google-map-index">
       <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLEMAPSAPI"] %>&callback=initMap"
       async defer>
       </script> 
     </div>
-    <div id="meteor-show-container">
 
+    <div id="meteor-show-container">
     </div>
+
     <div id="directions-container">
       <h1>Directions</h1>
       <%= link_to "Find Another Meteor", {:action => "index"}, :id => "find_another_meteor" %>
       <br>
       <br>
     </div>
-
+    
   </body>
-
 </html>
 
 
