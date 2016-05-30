@@ -1,12 +1,14 @@
 meteorArray = []
 
 var map;
+// Callback function used to initialize map on meteors/index.html.erb
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.7128, lng: -74.0059},
     zoom: 4
   });
 
+  // Meteor object used to store meteor data from NASA api
   var Meteor = function(lat, lng, name, mass, year){
     this.lat = lat;
     this.lng = lng;
@@ -15,6 +17,7 @@ function initMap() {
     this.year = year;
   }
 
+  // Loop used to store NASA meteor data in Meteor objects 
   var populateMeteors = function(response){
     for(var i = 0; i < response.length; i ++){
       meteorArray.push(new Meteor(parseFloat(response[i].reclat), parseFloat(response[i].reclong), response[i].name, response[i].mass, response[i].year))
@@ -23,9 +26,9 @@ function initMap() {
   }
 
   $(document).ready(function(){
+    // jQuery/AJAX used to center map via form data captured from addresses/_form.html.erb
     $("#address-form-container").on("submit", '#address-form', function(event){
       event.preventDefault();
-      var that = $(event.target).serialize()
       var form = this;
 
       $.ajax({
@@ -40,10 +43,10 @@ function initMap() {
           map.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng));
           map.setZoom(6);
         });
-
       });
     });
 
+    // AJAX used to populate map with meteor data from NASA
     $.ajax({
       url: 'https://data.nasa.gov/resource/gh4g-9sfh.json',
       data: {fall: "Fell"}
@@ -65,6 +68,7 @@ function initMap() {
           id: i
         });
 
+        // Makes Meteors clickable events 
         google.maps.event.addListener(markers[i], 'click', function () {
           map.setCenter(markers[this.id].getPosition());
           map.setZoom(8);
@@ -75,9 +79,6 @@ function initMap() {
             type: 'POST',
             data: data,
             dataType: "json",
-            success: function(response){
-              alert("oiwjfiojefio")
-            },
             error: function(response){
               $("#address-form-container").hide()
               $("#meteor-show-container").html(response.responseText)
@@ -87,6 +88,7 @@ function initMap() {
       }
     });
 
+    // Sends form data to addresses#create where HTTParty gem is used to retrieve directions from google api
     $("#meteor-show-container").on("submit", "#meteor-show-button",function(event){
       event.preventDefault();
       var lat = $("#lat").val();
