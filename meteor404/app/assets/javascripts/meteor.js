@@ -83,6 +83,7 @@ function initMap() {
             dataType: "json",
             error: function(response){
               $("#address-form-container").hide();
+              $("#meteor-show-container").show();
               $("#meteor-show-container").html(response.responseText);
             }
           });
@@ -91,10 +92,10 @@ function initMap() {
     });
 
     // Remove meteor details partial on click
-
     $("#meteor-show-container").on("click", "#return_to_map", function(event){
       event.preventDefault()
-      alert("hit the prevent")
+      $("#meteor-show-container").hide();
+      $("#address-form-container").show();
     })
 
     // Sends form data to addresses#create where HTTParty gem is used to retrieve directions from google api
