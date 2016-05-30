@@ -66,3 +66,11 @@ input {
   top: 5.5rem;
   width: 45%;
 }
+
+#directions-container {
+  position: absolute;
+  display: block;
+  right: 2rem;
+  top: 5.5rem;
+  width: 45%;
+}
