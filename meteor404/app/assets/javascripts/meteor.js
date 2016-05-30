@@ -99,7 +99,11 @@ function initMap() {
       $("#address-form-container").show();
     })
 
-    $("#find_another_meteor")
+    $("#find_another_meteor").on("click", function(event){
+      event.preventDefault();
+      $("#directions-container").hide();
+      $("#address-form-container").show();
+    })
 
     // Sends form data to addresses#create where HTTParty gem is used to retrieve directions from google api
     $("#meteor-show-container").on("submit", "#meteor-show-button",function(event){
