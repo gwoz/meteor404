@@ -16,6 +16,8 @@ class AddressesController < ApplicationController
 
     direction_list = directions["routes"][0]["legs"][0]["steps"].each do |step|
       @step_list << step["html_instructions"]
+      @step_list << "<br>"
+      @step_list << "<br>"
     end
     render json: @step_list 
   end

@@ -26,6 +26,7 @@ function initMap() {
   };
 
   $(document).ready(function(){
+    $("#directions-container").hide();
     // jQuery/AJAX used to center map via form data captured from addresses/_form.html.erb
     $("#address-form-container").on("submit", '#address-form', function(event){
       event.preventDefault();
@@ -117,7 +118,8 @@ function initMap() {
         dataType: "json", 
         success: function(response){
           $("#meteor-show-container").hide();
-          $("#directions-container").html(response);
+          $("#directions-container").show();
+          $("#directions-container").append(response);
         },
       });
     });
