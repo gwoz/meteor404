@@ -13,11 +13,14 @@ class AddressesController < ApplicationController
 
     directions = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{street}+#{city}+#{state}&destination=#{lat}+#{lng}")
     @step_list = []
-
+    i = 1
     direction_list = directions["routes"][0]["legs"][0]["steps"].each do |step|
+      @step_list << i
+      @step_list << ". "
       @step_list << step["html_instructions"]
       @step_list << "<br>"
       @step_list << "<br>"
+      i += 1
     end
     render json: @step_list 
   end
