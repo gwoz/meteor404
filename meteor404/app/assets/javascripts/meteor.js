@@ -90,6 +90,13 @@ function initMap() {
       }
     });
 
+    // Remove meteor details partial on click
+
+    $("#meteor-show-container").on("click", "#return_to_map", function(event){
+      event.preventDefault()
+      alert("hit the prevent")
+    })
+
     // Sends form data to addresses#create where HTTParty gem is used to retrieve directions from google api
     $("#meteor-show-container").on("submit", "#meteor-show-button",function(event){
       event.preventDefault();

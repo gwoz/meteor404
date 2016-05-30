@@ -4,7 +4,7 @@
 <h3>year entered atmosphere: <%= @meteor.year %></h3>
 <h3>approx lat/long: <%= @meteor.reclat %>  <%= @meteor.reclong %></h3>
 <br>
-<%= link_to "Return to Map", id: "return_to_map" %>
+<%= link_to "Return to Map", { :action => 'index' },:id => "return_to_map" %>
 <br>
 <br>
 <%= form_for :address, :html => {id: 'meteor-show-button'},url: { controller: "addresses", action: "create" } do |f| %>
