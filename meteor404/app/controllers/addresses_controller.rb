@@ -31,10 +31,9 @@ class AddressesController < ApplicationController
   end
 
   private
-
-  def addresses_params
-    params.require(:address).permit(:content)
-  end
+    def addresses_params
+      params.require(:address).permit(:content)
+    end
 end
 
 
