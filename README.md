@@ -7,13 +7,14 @@ Ruby on Rails, JavaScript, jQuery/AJAX, NASA Meteorite Landing API and Google Ma
 ##Features
 
 #### View fallen meteors around world 
-#### Click on Meteors to view data about them
-#### Center Map on your location via form 
+#### Center map on your location 
+#### Click on meteors to view data about them
+#### Get directions to meteors 
 
 ## Work in Progress / To Do
-- [ ] Show Directions to Meteors on map
+- [ ] Show directions routes to Meteors on map
 - [ ] User login 
-- [ ] Favoriting of Meteors
+- [ ] Favoriting of meteors
 - [ ] Email directions
 - [ ] Improve CSS styling
 - [ ] Launch to Heroku
