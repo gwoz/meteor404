@@ -1,5 +1,4 @@
 class MeteorsController < ApplicationController
-  # before_action :find_meteor
   skip_before_action :verify_authenticity_token
   def index
   end
@@ -10,17 +9,4 @@ class MeteorsController < ApplicationController
 
     render '_meteor_details_section', locals: { meteor: @meteor}, layout: false
   end
-
-  def show
-    @address = Address.new
-    @meteor = Meteor.find(params[:id])
-  end
-
-  private
-  # Unsure if this will break or not for pages that don't have an id.
-
-  # def find_meteor
-  #   @meteor = Meteor.find(params[:id])
-  # end
-
 end
