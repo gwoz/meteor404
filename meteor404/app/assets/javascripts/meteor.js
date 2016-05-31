@@ -31,16 +31,14 @@ function initMap() {
     $("#address-form-container").on("submit", '#address-form', function(event){
       event.preventDefault();
       var form = this;
-
       $.ajax({
       method: 'post',
       url: "http://localhost:3000/addresses/center_map",
       data: $(event.target).serialize()
       }).then(function(response) {
         var city = response.city;
-        var state = response.state;
         form.reset();
-        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+city+"+"+state+"", function(response){
+        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+city+"", function(response){
           map.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng));
           map.setZoom(6);
         });
