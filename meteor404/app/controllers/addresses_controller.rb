@@ -14,7 +14,7 @@ class AddressesController < ApplicationController
     directions = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?origin=#{street}+#{city}+#{state}&destination=#{lat}+#{lng}")
     @step_list = []
     i = 1
-    if directions.length < 1 
+    if directions["routes"].any?  
       direction_list = directions["routes"][0]["legs"][0]["steps"].each do |step|
         @step_list << i
         @step_list << ". "

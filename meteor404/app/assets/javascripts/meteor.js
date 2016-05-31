@@ -123,7 +123,7 @@ function initMap() {
         success: function(response){
           $("#meteor-show-container").hide();
           $("#directions-container").show();
-          $("#directions-container").append(response);
+          $("#directions-list-container").html(response);
         },
       });
     });
