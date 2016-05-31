@@ -26,6 +26,7 @@ function initMap() {
   };
 
   $(document).ready(function(){
+    $("#directions-container").hide();
     // jQuery/AJAX used to center map via form data captured from addresses/_form.html.erb
     $("#address-form-container").on("submit", '#address-form', function(event){
       event.preventDefault();
@@ -98,6 +99,12 @@ function initMap() {
       $("#address-form-container").show();
     })
 
+    $("#find_another_meteor").on("click", function(event){
+      event.preventDefault();
+      $("#directions-container").hide();
+      $("#address-form-container").show();
+    })
+
     // Sends form data to addresses#create where HTTParty gem is used to retrieve directions from google api
     $("#meteor-show-container").on("submit", "#meteor-show-button",function(event){
       event.preventDefault();
@@ -116,8 +123,9 @@ function initMap() {
         headers: {"X-Requested-With":"XMLHttpRequest"},
         dataType: "json", 
         success: function(response){
-          $("#meteor-show-container").html(response);
-          $("#meteor-show-button").hide();
+          $("#meteor-show-container").hide();
+          $("#directions-container").show();
+          $("#directions-container").append(response);
         },
       });
     });
