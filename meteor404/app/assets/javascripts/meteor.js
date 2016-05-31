@@ -1,4 +1,4 @@
-meteorArray = []
+meteorArray = [];
 
 var map;
 // Callback function used to initialize map on meteors/index.html.erb
@@ -15,15 +15,15 @@ function initMap() {
     this.name = name;
     this.mass = mass;
     this.year = year;
-  }
+  };
 
   // Loop used to store NASA meteor data in Meteor objects 
   var populateMeteors = function(response){
     for(var i = 0; i < response.length; i ++){
-      meteorArray.push(new Meteor(parseFloat(response[i].reclat), parseFloat(response[i].reclong), response[i].name, response[i].mass, response[i].year))
+      meteorArray.push(new Meteor(parseFloat(response[i].reclat), parseFloat(response[i].reclong), response[i].name, response[i].mass, response[i].year));
     }
     return meteorArray;
-  }
+  };
 
   $(document).ready(function(){
     // jQuery/AJAX used to center map via form data captured from addresses/_form.html.erb
@@ -36,8 +36,8 @@ function initMap() {
       url: "http://localhost:3000/addresses/center_map",
       data: $(event.target).serialize()
       }).then(function(response) {
-        var city = response.city
-        var state = response.state
+        var city = response.city;
+        var state = response.state;
         form.reset();
         $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+city+"+"+state+"", function(response){
           map.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng));
@@ -73,7 +73,7 @@ function initMap() {
         google.maps.event.addListener(markers[i], 'click', function () {
           map.setCenter(markers[this.id].getPosition());
           map.setZoom(8);
-          var data = {name: this.name, lat: this.lat, lng: this.lng, mass: this.mass, year: this.year}
+          var data = {name: this.name, lat: this.lat, lng: this.lng, mass: this.mass, year: this.year};
 
           // Display meteor data on page when clicked
           $.ajax({
@@ -82,11 +82,11 @@ function initMap() {
             data: data,
             dataType: "json",
             error: function(response){
-              $("#address-form-container").hide()
-              $("#meteor-show-container").html(response.responseText)
+              $("#address-form-container").hide();
+              $("#meteor-show-container").html(response.responseText);
             }
-          })
-        })
+          });
+        });
       }
     });
 
@@ -99,7 +99,7 @@ function initMap() {
       var city = $("#city").val();
       var state = $("#state").val();
       var country = $("#country").val();
-      var data = {lat: lat, lng: lng, street: street, city: city, state: state, country: country}
+      var data = {lat: lat, lng: lng, street: street, city: city, state: state, country: country};
 
       $.ajax({
         url: 'http://www.localhost:3000/addresses',
@@ -108,11 +108,10 @@ function initMap() {
         headers: {"X-Requested-With":"XMLHttpRequest"},
         dataType: "json", 
         success: function(response){
-          $("#meteor-show-container").html(response)
-          $("#meteor-show-button").hide()
+          $("#meteor-show-container").html(response);
+          $("#meteor-show-button").hide();
         },
-      })
-    })
-  })
+      });
+    });
+  });
 }
-
