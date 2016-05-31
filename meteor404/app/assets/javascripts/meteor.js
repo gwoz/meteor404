@@ -53,6 +53,7 @@ function initMap() {
     }).done(function(response){
       populateMeteors(response);
 
+      // Loop used to create markers for all Meteors. i is stored as id so that meteor data can be retrieved for individual meteors. markers[i] = "var" is included because meteors had to be created and stored as variables dynamically. This allows meteors to be referred to by their index when markers are created.
       var markers = [];
       for (var i = 0; i < meteorArray.length; ++i){
         markers[i] = "var";
