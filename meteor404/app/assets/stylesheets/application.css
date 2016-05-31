@@ -55,6 +55,10 @@ input {
   width: 100%;
 }
 
+#directions-button {
+  height: 6em;
+}
+
 #meteor-show-container {
   position: absolute;
   display: block;
