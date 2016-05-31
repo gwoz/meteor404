@@ -26,7 +26,7 @@ class AddressesController < ApplicationController
   end
 
   def center_map
-    @address = Address.new(city: params["address"]["city"], state: params["address"]["state"])
+    @address = Address.new(city: params["city"])
     render json: @address
   end
 

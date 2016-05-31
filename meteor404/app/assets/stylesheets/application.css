@@ -35,13 +35,12 @@ header {
   left: 0; 
   top: 8.54rem;"
 }
-/*Form */
 
 #address-form-container {
   position: absolute;
   display: inline-block;
-  right: 2rem;
-  top: 8.5rem;
+  left: 1.5rem;
+  top: 29rem;
 }
 
 form {

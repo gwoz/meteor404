@@ -1,13 +1,5 @@
 <%= form_for :address, url: { controller: "addresses", action: "create" }, :html => {:id => 'address-form'} do |f| %>
-    <%= f.label :City %>
-    <%= f.text_field :city %>
-
-    <%= f.label :State %>
-    <%= f.text_field :state %>
-
-    <%= f.label :Country %>
-    <%= f.text_field :country %>
-    <br>
+    <%= select_tag "city", options_for_select([ ['Atlanta', 'Atlanta'], ['Boston', 'Boston'], ['Chicago', 'Chicago'], ['Detroit', 'Detroit'], ['Houston', 'Houston'], ['Los Angeles', 'Los Angeles'], ['Mexico City', 'Mexico City'], ['Miami', 'Miami'], ['Montreal', 'Montreal'], ['New York' ,'New york'], ['Philadelphia', 'Philadelphia'], ['San Diego', 'San Diego'], ['San Francisco', 'San Francisco'], ['Seattle', 'Seattle'], ['Vancouver', 'Vancouver'], ['Washington', 'Washington'] ]) %>
     <%= f.submit 'Submit', class: "new-address-button" %>
 <% end %>
 

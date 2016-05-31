@@ -4,7 +4,7 @@ var map;
 // Callback function used to initialize map on meteors/index.html.erb
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.7128, lng: -74.0059},
+    center: {lat: 40.7128, lng: -95.0059},
     zoom: 4
   });
 
@@ -31,16 +31,14 @@ function initMap() {
     $("#address-form-container").on("submit", '#address-form', function(event){
       event.preventDefault();
       var form = this;
-
       $.ajax({
       method: 'post',
       url: "http://localhost:3000/addresses/center_map",
       data: $(event.target).serialize()
       }).then(function(response) {
         var city = response.city;
-        var state = response.state;
         form.reset();
-        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+city+"+"+state+"", function(response){
+        $.get("https://maps.googleapis.com/maps/api/geocode/json?address="+city+"", function(response){
           map.setCenter(new google.maps.LatLng(response.results[0].geometry.location.lat, response.results[0].geometry.location.lng));
           map.setZoom(6);
         });
@@ -83,7 +81,6 @@ function initMap() {
             data: data,
             dataType: "json",
             error: function(response){
-              $("#address-form-container").hide();
               $("#meteor-show-container").show();
               $("#meteor-show-container").html(response.responseText);
             }
