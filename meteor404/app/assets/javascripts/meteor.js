@@ -74,6 +74,7 @@ function initMap() {
           map.setZoom(8);
           var data = {name: this.name, lat: this.lat, lng: this.lng, mass: this.mass, year: this.year}
 
+          // Display meteor data on page when clicked
           $.ajax({
             url: 'http://www.localhost:3000/meteors',
             type: 'POST',
