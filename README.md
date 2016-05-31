@@ -11,10 +11,12 @@ Ruby on Rails, JavaScript, jQuery/AJAX, NASA Meteorite Landing API and Google Ma
 #### Center Map on your location via form 
 
 ## Work in Progress / To Do
-- [ ] Get Directions to Meteors
-- [ ] User login
+- [ ] Show Directions to Meteors on map
+- [ ] User login 
+- [ ] Favoriting of Meteors
+- [ ] Email directions
 - [ ] Improve CSS styling
-- [ ] Allow Users to favorite meteors
+- [ ] Launch to Heroku
 
 Brought to you by Akeem S, Mike G, and Tim B
 
