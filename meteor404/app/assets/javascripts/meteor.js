@@ -4,7 +4,7 @@ var map;
 // Callback function used to initialize map on meteors/index.html.erb
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.7128, lng: -74.0059},
+    center: {lat: 40.7128, lng: -95.0059},
     zoom: 4
   });
 
