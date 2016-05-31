@@ -1,4 +1,4 @@
-<%= form_for :address, :url => :addresses, :html => {:id => 'address-form'} do |f| %>
+<%= form_for :address, url: { controller: "addresses", action: "create" }, :html => {:id => 'address-form'} do |f| %>
     <%= f.label :City %>
     <%= f.text_field :city %>
 
