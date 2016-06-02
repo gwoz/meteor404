@@ -33,7 +33,7 @@ function initMap() {
       var form = this;
       $.ajax({
       method: 'post',
-      url: "localhost:3000/addresses/center_map",
+      url: "http://localhost:3000/addresses/center_map",
       data: $(event.target).serialize()
       }).then(function(response) {
         var city = response.city;
@@ -76,7 +76,7 @@ function initMap() {
 
           // Display meteor data on page when clicked
           $.ajax({
-            url: 'localhost:3000/meteors',
+            url: 'http://www.localhost:3000/meteors',
             type: 'POST',
             data: data,
             dataType: "json",
