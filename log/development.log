@@ -211,3 +211,32 @@ Started POST "/addresses" for ::1 at 2016-06-01 10:36:16 -0400
 Processing by AddressesController#create as JSON
   Parameters: {"lat"=>"46.88333", "lng"=>"-102.31667", "street"=>"India Street", "city"=>"Atlanta", "state"=>"NY", "country"=>"USA"}
 Completed 200 OK in 483ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-02 15:49:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MeteorsController#index as HTML
+  Rendered addresses/_form.html.erb (8.8ms)
+  Rendered meteors/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 308ms (Views: 307.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d5bcab924e5b6b43c8a02e03eb6734fd30da17ef17c3ef9e17f779c59ad1e6f4.css?body=1" for ::1 at 2016-06-02 15:49:01 -0400
+
+
+Started GET "/" for ::1 at 2016-06-02 15:55:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MeteorsController#index as HTML
+  Rendered addresses/_form.html.erb (7.2ms)
+  Rendered meteors/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 186ms (Views: 185.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/meteors" for ::1 at 2016-06-02 15:55:45 -0400
+Processing by MeteorsController#create as HTML
+  Parameters: {"name"=>"Benton", "lat"=>"45.95", "lng"=>"-67.55", "mass"=>"2840", "year"=>"1949-01-01T00:00:00"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "meteors" ("name", "mass", "year", "reclat", "reclong", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Benton"], ["mass", 2840], ["year", 1949], ["reclat", 45.95], ["reclong", -67.55], ["created_at", "2016-06-02 19:55:45.555738"], ["updated_at", "2016-06-02 19:55:45.555738"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  Rendered meteors/_meteor_details_section.html.erb (16.6ms)
+Completed 200 OK in 63ms (Views: 18.0ms | ActiveRecord: 9.9ms)
