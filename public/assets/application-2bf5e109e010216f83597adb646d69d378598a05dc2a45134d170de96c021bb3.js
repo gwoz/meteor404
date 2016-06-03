@@ -11627,7 +11627,7 @@ function initMap() {
       var form = this;
       $.ajax({
       method: 'post',
-      url: "http://localhost:3000/addresses/center_map",
+      url: "https://meteor404.herokuapp.com/addresses/center_map",
       data: $(event.target).serialize()
       }).then(function(response) {
         var city = response.city;
@@ -11670,7 +11670,7 @@ function initMap() {
 
           // Display meteor data on page when clicked
           $.ajax({
-            url: 'http://www.localhost:3000/meteors',
+            url: 'https://meteor404.herokuapp.com/meteors',
             type: 'POST',
             data: data,
             dataType: "json",
@@ -11709,7 +11709,7 @@ function initMap() {
       var data = {lat: lat, lng: lng, street: street, city: city, state: state, country: country};
 
       $.ajax({
-        url: 'http://www.localhost:3000/addresses',
+        url: 'https://meteor404.herokuapp.com/addresses',
         type: 'POST',
         data: data,
         headers: {"X-Requested-With":"XMLHttpRequest"},
