@@ -1,0 +1,77 @@
+h1, h2, body, form, a {
+  font-family: monospace;
+  text-align: left;
+  background-color: #000219;
+  color: white;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin-left: 1.5rem;
+}
+
+#map {
+  margin-left: 1.5rem;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  padding: 0;
+}
+
+#google-search-bar{
+  display: inline-block;
+  position: absolute; 
+  left: 0; 
+  top: 8.54rem;"
+}
+
+#address-form-container {
+  position: absolute;
+  display: inline-block;
+  left: 1.5rem;
+  top: 29rem;
+}
+
+form {
+  border-radius: 5px;
+  text-align: left;
+  top: 0;
+  left: 0;
+}
+
+input {
+  display: block;
+  width: 100%;
+}
+
+#directions-button {
+  height: 6em;
+}
+
+#meteor-show-container {
+  position: absolute;
+  display: block;
+  right: 2rem;
+  top: 5.5rem;
+  width: 45%;
+}
+
+#directions-container {
+  position: absolute;
+  display: block;
+  right: 2rem;
+  top: 5.5rem;
+  width: 45%;
+  font-size: 1rem;
+}

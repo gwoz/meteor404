@@ -33,6 +33,7 @@ function initMap() {
       var form = this;
       $.ajax({
       method: 'post',
+      // url: "https://meteor404.herokuapp.com/addresses/center_map",
       url: "http://localhost:3000/addresses/center_map",
       data: $(event.target).serialize()
       }).then(function(response) {
@@ -76,13 +77,16 @@ function initMap() {
 
           // Display meteor data on page when clicked
           $.ajax({
-            url: 'http://www.localhost:3000/meteors',
+            // url: 'https://meteor404.herokuapp.com/meteors',
+            url: 'http://localhost:3000/meteors',
             type: 'POST',
             data: data,
             dataType: "json",
             error: function(response){
               $("#meteor-show-container").show();
               $("#meteor-show-container").html(response.responseText);
+              $("#directions-container").hide();
+              $("#directions-container").clear();
             }
           });
         });
@@ -92,6 +96,10 @@ function initMap() {
     // Remove meteor details partial on click
     $("#meteor-show-container").on("click", "#return_to_map", function(event){
       event.preventDefault()
+      // $.get("https://maps.googleapis.com/maps/api/geocode/json?address="New York"", function(response){
+          map.setCenter(new google.maps.LatLng(40.7128, -95.0059));
+          map.setZoom(4);
+        // });
       $("#meteor-show-container").hide();
       $("#address-form-container").show();
     })
@@ -115,7 +123,8 @@ function initMap() {
       var data = {lat: lat, lng: lng, street: street, city: city, state: state, country: country};
 
       $.ajax({
-        url: 'http://www.localhost:3000/addresses',
+        // url: 'https://meteor404.herokuapp.com/addresses',
+        url: 'http://localhost:3000/addresses',
         type: 'POST',
         data: data,
         headers: {"X-Requested-With":"XMLHttpRequest"},
