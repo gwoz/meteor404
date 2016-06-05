@@ -1371,3 +1371,325 @@ Processing by MeteorsController#create as JSON
   [1m[35m (0.7ms)[0m  COMMIT
   Rendered meteors/_meteor_details_section.html.erb (8.2ms)
 Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-06-05 17:47:39 -0400
+Processing by MeteorsController#index as HTML
+  Rendered addresses/_form.html.erb (1.8ms)
+  Rendered meteors/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 102ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/meteor.self-3087bd97447db218466cf1cd1100bf80cf5a99fe595b43565bf00f5c019c2084.js?body=1" for ::1 at 2016-06-05 17:47:40 -0400
+
+
+Started GET "/assets/application.self-d5bcab924e5b6b43c8a02e03eb6734fd30da17ef17c3ef9e17f779c59ad1e6f4.css?body=1" for ::1 at 2016-06-05 17:47:40 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-05 17:47:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-05 17:47:40 -0400
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:47:40 -0400
+
+
+Started GET "/assets/googlemaps.self-abd8065ed79974ea59b637aab65c5f82a47c002903207be878b7e962d413dd51.js?body=1" for ::1 at 2016-06-05 17:47:40 -0400
+
+
+Started GET "/assets/meteors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:47:40 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:47:40 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-05 17:47:40 -0400
+
+
+Started GET "/" for ::1 at 2016-06-05 17:47:47 -0400
+Processing by MeteorsController#index as HTML
+  Rendered addresses/_form.html.erb (1.5ms)
+  Rendered meteors/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 109ms (Views: 108.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d5bcab924e5b6b43c8a02e03eb6734fd30da17ef17c3ef9e17f779c59ad1e6f4.css?body=1" for ::1 at 2016-06-05 17:47:48 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-05 17:47:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-05 17:47:48 -0400
+
+
+Started GET "/assets/meteor.self-14fdf63a680e2aba0ca52691a9ed071c276249006ad3197f7585bbeff65bc0bf.js?body=1" for ::1 at 2016-06-05 17:47:48 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:47:48 -0400
+
+
+Started GET "/assets/meteors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:47:48 -0400
+
+
+Started GET "/assets/googlemaps.self-abd8065ed79974ea59b637aab65c5f82a47c002903207be878b7e962d413dd51.js?body=1" for ::1 at 2016-06-05 17:47:48 -0400
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:47:48 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-05 17:47:48 -0400
+
+
+Started GET "/" for ::1 at 2016-06-05 17:47:53 -0400
+Processing by MeteorsController#index as HTML
+  Rendered addresses/_form.html.erb (1.9ms)
+  Rendered meteors/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 106ms (Views: 105.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/meteor.self-3ee5bd5c5748fd02a8bd8a01a5a1c39badbc5f0e3a3317ae1b10575f853ecd98.js?body=1" for ::1 at 2016-06-05 17:47:54 -0400
+
+
+Started GET "/assets/application.self-d5bcab924e5b6b43c8a02e03eb6734fd30da17ef17c3ef9e17f779c59ad1e6f4.css?body=1" for ::1 at 2016-06-05 17:47:54 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-05 17:47:54 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-05 17:47:54 -0400
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:47:54 -0400
+
+
+Started GET "/assets/googlemaps.self-abd8065ed79974ea59b637aab65c5f82a47c002903207be878b7e962d413dd51.js?body=1" for ::1 at 2016-06-05 17:47:54 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:47:54 -0400
+
+
+Started GET "/assets/meteors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:47:54 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-05 17:47:54 -0400
+
+
+Started GET "/" for ::1 at 2016-06-05 17:48:00 -0400
+Processing by MeteorsController#index as HTML
+  Rendered addresses/_form.html.erb (1.8ms)
+  Rendered meteors/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 96ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/meteor.self-89fdf1b69b46518716b7e0239a2a1f1498e76814233fc2527783307f17b86d69.js?body=1" for ::1 at 2016-06-05 17:48:01 -0400
+
+
+Started GET "/assets/application.self-d5bcab924e5b6b43c8a02e03eb6734fd30da17ef17c3ef9e17f779c59ad1e6f4.css?body=1" for ::1 at 2016-06-05 17:48:01 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-05 17:48:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-05 17:48:01 -0400
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:01 -0400
+
+
+Started GET "/assets/googlemaps.self-abd8065ed79974ea59b637aab65c5f82a47c002903207be878b7e962d413dd51.js?body=1" for ::1 at 2016-06-05 17:48:01 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:01 -0400
+
+
+Started GET "/assets/meteors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:01 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-05 17:48:01 -0400
+
+
+Started POST "/meteors" for ::1 at 2016-06-05 17:48:03 -0400
+Processing by MeteorsController#create as JSON
+  Parameters: {"name"=>"Deal", "lat"=>"40.25", "lng"=>"-74", "mass"=>"28", "year"=>"1829-01-01T00:00:00"}
+  [1m[36m (15.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "meteors" ("name", "mass", "year", "reclat", "reclong", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Deal"], ["mass", 28], ["year", 1829], ["reclat", 40.25], ["reclong", -74.0], ["created_at", "2016-06-05 21:48:03.969995"], ["updated_at", "2016-06-05 21:48:03.969995"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  Rendered meteors/_meteor_details_section.html.erb (3.6ms)
+Completed 200 OK in 80ms (Views: 49.7ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/" for ::1 at 2016-06-05 17:48:14 -0400
+Processing by MeteorsController#index as HTML
+  Rendered addresses/_form.html.erb (2.1ms)
+  Rendered meteors/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 101ms (Views: 100.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/meteor.self-cc3d51a2156684b81930ff37c533591165d4c72322d98ac707126a8e6b6c8934.js?body=1" for ::1 at 2016-06-05 17:48:15 -0400
+
+
+Started GET "/assets/application.self-d5bcab924e5b6b43c8a02e03eb6734fd30da17ef17c3ef9e17f779c59ad1e6f4.css?body=1" for ::1 at 2016-06-05 17:48:15 -0400
+
+
+Started GET "/assets/googlemaps.self-abd8065ed79974ea59b637aab65c5f82a47c002903207be878b7e962d413dd51.js?body=1" for ::1 at 2016-06-05 17:48:15 -0400
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:15 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-05 17:48:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-05 17:48:15 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:15 -0400
+
+
+Started GET "/assets/meteors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:15 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-05 17:48:15 -0400
+
+
+Started POST "/meteors" for ::1 at 2016-06-05 17:48:19 -0400
+Processing by MeteorsController#create as JSON
+  Parameters: {"name"=>"Deal", "lat"=>"40.25", "lng"=>"-74", "mass"=>"28", "year"=>"1829-01-01T00:00:00"}
+  [1m[35m (1.2ms)[0m  BEGIN
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "meteors" ("name", "mass", "year", "reclat", "reclong", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Deal"], ["mass", 28], ["year", 1829], ["reclat", 40.25], ["reclong", -74.0], ["created_at", "2016-06-05 21:48:19.035729"], ["updated_at", "2016-06-05 21:48:19.035729"]]
+  [1m[35m (7.4ms)[0m  COMMIT
+  Rendered meteors/_meteor_details_section.html.erb (4.0ms)
+Completed 200 OK in 51ms (Views: 34.4ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for ::1 at 2016-06-05 17:48:27 -0400
+Processing by MeteorsController#index as HTML
+  Rendered addresses/_form.html.erb (1.9ms)
+  Rendered meteors/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 98ms (Views: 97.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d5bcab924e5b6b43c8a02e03eb6734fd30da17ef17c3ef9e17f779c59ad1e6f4.css?body=1" for ::1 at 2016-06-05 17:48:27 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-05 17:48:27 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-05 17:48:27 -0400
+
+
+Started GET "/assets/meteor.self-8fc94bafc32232294812404c38b6d6dbbebd52a9494ffe24a44d6a373209b1eb.js?body=1" for ::1 at 2016-06-05 17:48:27 -0400
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:27 -0400
+
+
+Started GET "/assets/googlemaps.self-abd8065ed79974ea59b637aab65c5f82a47c002903207be878b7e962d413dd51.js?body=1" for ::1 at 2016-06-05 17:48:27 -0400
+
+
+Started GET "/assets/meteors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:27 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:27 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-05 17:48:27 -0400
+
+
+Started POST "/meteors" for ::1 at 2016-06-05 17:48:31 -0400
+Processing by MeteorsController#create as JSON
+  Parameters: {"name"=>"Deal", "lat"=>"40.25", "lng"=>"-74", "mass"=>"28", "year"=>"1829-01-01T00:00:00"}
+  [1m[36m (2.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "meteors" ("name", "mass", "year", "reclat", "reclong", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Deal"], ["mass", 28], ["year", 1829], ["reclat", 40.25], ["reclong", -74.0], ["created_at", "2016-06-05 21:48:31.126965"], ["updated_at", "2016-06-05 21:48:31.126965"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  Rendered meteors/_meteor_details_section.html.erb (2.6ms)
+Completed 200 OK in 39ms (Views: 25.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-05 17:48:40 -0400
+Processing by MeteorsController#index as HTML
+  Rendered addresses/_form.html.erb (1.6ms)
+  Rendered meteors/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d5bcab924e5b6b43c8a02e03eb6734fd30da17ef17c3ef9e17f779c59ad1e6f4.css?body=1" for ::1 at 2016-06-05 17:48:41 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-05 17:48:41 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-05 17:48:41 -0400
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:41 -0400
+
+
+Started GET "/assets/googlemaps.self-abd8065ed79974ea59b637aab65c5f82a47c002903207be878b7e962d413dd51.js?body=1" for ::1 at 2016-06-05 17:48:41 -0400
+
+
+Started GET "/assets/meteor.self-8fc94bafc32232294812404c38b6d6dbbebd52a9494ffe24a44d6a373209b1eb.js?body=1" for ::1 at 2016-06-05 17:48:41 -0400
+
+
+Started GET "/assets/meteors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:41 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:41 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-05 17:48:41 -0400
+
+
+Started POST "/meteors" for ::1 at 2016-06-05 17:48:44 -0400
+Processing by MeteorsController#create as JSON
+  Parameters: {"name"=>"Deal", "lat"=>"40.25", "lng"=>"-74", "mass"=>"28", "year"=>"1829-01-01T00:00:00"}
+  [1m[35m (3.2ms)[0m  BEGIN
+  [1m[36mSQL (9.8ms)[0m  [1mINSERT INTO "meteors" ("name", "mass", "year", "reclat", "reclong", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Deal"], ["mass", 28], ["year", 1829], ["reclat", 40.25], ["reclong", -74.0], ["created_at", "2016-06-05 21:48:44.791698"], ["updated_at", "2016-06-05 21:48:44.791698"]]
+  [1m[35m (5.3ms)[0m  COMMIT
+  Rendered meteors/_meteor_details_section.html.erb (3.4ms)
+Completed 200 OK in 45ms (Views: 23.5ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-05 17:48:53 -0400
+Processing by MeteorsController#index as HTML
+  Rendered addresses/_form.html.erb (1.5ms)
+  Rendered meteors/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 103ms (Views: 102.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/meteor.self-b106765ef2c8baf8386fd7cb223419298ef8a5d7c71c25a8b4761b0ed0e86211.js?body=1" for ::1 at 2016-06-05 17:48:53 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-05 17:48:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-05 17:48:53 -0400
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:53 -0400
+
+
+Started GET "/assets/googlemaps.self-abd8065ed79974ea59b637aab65c5f82a47c002903207be878b7e962d413dd51.js?body=1" for ::1 at 2016-06-05 17:48:53 -0400
+
+
+Started GET "/assets/application.self-d5bcab924e5b6b43c8a02e03eb6734fd30da17ef17c3ef9e17f779c59ad1e6f4.css?body=1" for ::1 at 2016-06-05 17:48:53 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-05 17:48:54 -0400
+
+
+Started GET "/assets/meteors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:54 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-05 17:48:54 -0400
+
+
+Started POST "/meteors" for ::1 at 2016-06-05 17:48:57 -0400
+Processing by MeteorsController#create as JSON
+  Parameters: {"name"=>"New Concord", "lat"=>"40", "lng"=>"-81.76667", "mass"=>"230000", "year"=>"1860-01-01T00:00:00"}
+  [1m[36m (5.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.8ms)[0m  INSERT INTO "meteors" ("name", "mass", "year", "reclat", "reclong", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "New Concord"], ["mass", 230000], ["year", 1860], ["reclat", 40.0], ["reclong", -81.76667], ["created_at", "2016-06-05 21:48:57.063420"], ["updated_at", "2016-06-05 21:48:57.063420"]]
+  [1m[36m (20.1ms)[0m  [1mCOMMIT[0m
+  Rendered meteors/_meteor_details_section.html.erb (2.6ms)
+Completed 200 OK in 60ms (Views: 26.6ms | ActiveRecord: 29.3ms)

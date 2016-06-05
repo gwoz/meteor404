@@ -96,6 +96,10 @@ function initMap() {
     // Remove meteor details partial on click
     $("#meteor-show-container").on("click", "#return_to_map", function(event){
       event.preventDefault()
+      // $.get("https://maps.googleapis.com/maps/api/geocode/json?address="New York"", function(response){
+          map.setCenter(new google.maps.LatLng(40.7128, -95.0059));
+          map.setZoom(4);
+        // });
       $("#meteor-show-container").hide();
       $("#address-form-container").show();
     })
